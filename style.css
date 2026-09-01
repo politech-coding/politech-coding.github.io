@@ -56,6 +56,61 @@ section p {
   margin-bottom: 20px;
 }
 
+/* горизонтальный "пиннинг" карточек проектов при скролле — только на широких экранах */
+@media (min-width: 769px) {
+  .pin-wrap {
+    position: relative;
+    height: 200vh; /* 2 слайда */
+  }
+
+  .pin-sticky {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+
+  .h-track {
+    display: flex;
+    height: auto;
+    will-change: transform;
+  }
+
+  .slide {
+    width: 100vw;
+    flex-shrink: 0;
+  }
+
+  .slide .card {
+    margin-bottom: 0;
+  }
+}
+
+/* на узких экранах — обычный столбик карточек, без пиннинга */
+@media (max-width: 768px) {
+  .pin-wrap,
+  .pin-sticky,
+  .h-track {
+    height: auto;
+    position: static;
+    overflow: visible;
+  }
+
+  .h-track {
+    display: block;
+  }
+
+  .slide {
+    width: auto;
+  }
+
+  .slide .card {
+    margin-bottom: 20px;
+  }
+}
+
 .card h3 {
   font-size: 1.15rem;
   margin-bottom: 4px;

@@ -15,58 +15,75 @@
     </div>
   </header>
 
-  <main class="container">
+  <main>
 
     <section id="about">
-      <h2>Обо мне</h2>
-      <p>
-        Студент СПбПУ, 3 курс, инфокоммуникационные технологии.
-        Учу ТФКП и численные методы. Работаю в Python (NumPy, SciPy, Matplotlib), MATLAB, LaTeX.
-        Интересуюсь численными методами и сетевой инфраструктурой.
-      </p>
+      <div class="container">
+        <h2>Обо мне</h2>
+        <p>
+          Студент СПбПУ, 3 курс, инфокоммуникационные технологии.
+          Учу ТФКП и численные методы. Работаю в Python (NumPy, SciPy, Matplotlib), MATLAB, LaTeX.
+          Интересуюсь численными методами и сетевой инфраструктурой.
+        </p>
+      </div>
     </section>
 
     <section id="projects">
-      <h2>Проекты</h2>
+      <h2 class="container">Проекты</h2>
 
-      <article class="card">
-        <h3>Мягкая посадка ракеты-носителя</h3>
-        <p class="card-tag">Курсовая работа · численные методы</p>
-        <p>
-          Смоделировал вертикальную посадку разгонного блока: уравнение движения
-          с квадратичным сопротивлением воздуха и линейно нарастающей тягой,
-          интегрирование методом Рунге-Кутты 4 порядка (RK4). Параметры посадки
-          (момент включения двигателя и момент касания земли) искал методом
-          стрельбы в связке с методом Ньютона и методом Бройдена
-          (<code>scipy.optimize.root</code>).
-        </p>
-        <p>
-          Сравнил оба метода между собой и ещё с двумя библиотечными решателями
-          (Левенберга-Марквардта и безградиентным df-sane) по числу вычислений
-          и точности. Итоговая точность посадки — до 10⁻⁸ м при требуемой 0.01 м.
-        </p>
-        <p class="stack">Python · NumPy · SciPy · Matplotlib</p>
-      </article>
+      <div class="pin-wrap">
+        <div class="pin-sticky">
+          <div class="h-track">
 
-      <article class="card">
-        <h3>VPN-сервер на своём VPS</h3>
-        <p class="card-tag">Инфраструктура</p>
-        <p>
-          Поднял VPN-сервер на Xray с четырьмя протоколами (Reality, WebSocket,
-          XHTTP, Trojan+gRPC) для 13 человек — основной сервер у VeeSP, резервный
-          у XorekCloud.
-        </p>
-        <p class="stack">Xray · Linux · VPS</p>
-      </article>
+            <article class="slide">
+              <div class="container card">
+                <h3>Мягкая посадка ракеты-носителя</h3>
+                <p class="card-tag">Курсовая работа · численные методы</p>
+                <p>
+                  Смоделировал вертикальную посадку разгонного блока: уравнение движения
+                  с квадратичным сопротивлением воздуха и линейно нарастающей тягой,
+                  интегрирование методом Рунге-Кутты 4 порядка (RK4). Параметры посадки
+                  (момент включения двигателя и момент касания земли) искал методом
+                  стрельбы в связке с методом Ньютона и методом Бройдена
+                  (<code>scipy.optimize.root</code>).
+                </p>
+                <p>
+                  Сравнил оба метода между собой и ещё с двумя библиотечными решателями
+                  (Левенберга-Марквардта и безградиентным df-sane) по числу вычислений
+                  и точности. Итоговая точность посадки — до 10⁻⁸ м при требуемой 0.01 м.
+                </p>
+                <p class="stack">Python · NumPy · SciPy · Matplotlib</p>
+              </div>
+            </article>
 
+            <article class="slide">
+              <div class="container card">
+                <h3>VPN-сервер на своём VPS</h3>
+                <p class="card-tag">Инфраструктура</p>
+                <p>
+                  Поднял VPN-сервер на Xray с четырьмя протоколами (Reality, WebSocket,
+                  XHTTP, Trojan+gRPC) для 13 человек — основной сервер у VeeSP, резервный
+                  у XorekCloud.
+                </p>
+                <p class="stack">Xray · Linux · VPS</p>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="contact">
-      <h2>Контакты</h2>
-      <p><a href="https://t.me/yadqdq" target="_blank" rel="noopener">Telegram: @yadqdq</a></p>
+      <div class="container">
+        <h2>Контакты</h2>
+        <p><a href="https://t.me/yadqdq" target="_blank" rel="noopener">Telegram: @yadqdq</a></p>
+      </div>
     </section>
 
   </main>
+
+  <script src="script.js"></script>
 
   <footer class="container">
     <p>&copy; 2026 Ярослав</p>
